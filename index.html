@@ -2,139 +2,151 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio – Yacine Aoui</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-      background: linear-gradient(to right, #eef2f7, #ffffff);
-      color: #212529;
-      padding: 40px 20px;
-      max-width: 950px;
-      margin: auto;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #f9f9fb, #ffffff);
+      color: #1a1a1a;
+      animation: fadeIn 1.2s ease-in;
     }
 
-    h1 {
-      font-size: 3em;
-      color: #003566;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
       text-align: center;
+      padding: 80px 20px 40px;
+      background-color: #f2f6ff;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      color: #0d3b66;
       margin-bottom: 10px;
     }
 
-    h1::after {
-      content: '';
-      display: block;
-      width: 60px;
-      margin: 10px auto 30px;
-      border-bottom: 3px solid #003566;
+    header p {
+      font-size: 1.2em;
+      color: #444;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
     }
 
     h2 {
-      color: #003566;
+      color: #0d3b66;
+      border-left: 6px solid #ffc107;
+      padding-left: 15px;
       font-size: 2em;
-      margin-top: 50px;
-      border-left: 5px solid #003566;
-      padding-left: 12px;
+      margin-top: 40px;
     }
 
-    p {
-      font-size: 1.1em;
-      line-height: 1.8;
-      margin-bottom: 20px;
+    .projects {
+      display: grid;
+      gap: 30px;
+      margin-top: 30px;
     }
 
     .project {
-      background-color: #ffffff;
-      padding: 25px;
-      border: 1px solid #dee2e6;
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-left: 6px solid #0d6efd;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      margin-top: 25px;
-      transition: transform 0.3s ease;
+      padding: 25px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s;
     }
 
     .project:hover {
       transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
     .project h3 {
       margin-top: 0;
-      font-size: 1.5em;
-      color: #343a40;
+      color: #333;
+    }
+
+    .project p {
+      margin-bottom: 10px;
+      font-size: 1.05em;
     }
 
     .project a {
       display: inline-block;
-      margin-top: 15px;
-      background-color: #003566;
+      margin-top: 10px;
+      background-color: #0d6efd;
       color: white;
       text-decoration: none;
       padding: 10px 20px;
       border-radius: 6px;
-      font-weight: bold;
+      font-weight: 600;
       transition: background-color 0.3s;
     }
 
     .project a:hover {
-      background-color: #001d3d;
+      background-color: #003b9f;
     }
 
-    .contact {
-      margin-top: 40px;
-      padding: 25px;
-      background-color: #f1f3f5;
-      border-radius: 10px;
+    footer {
+      background-color: #f8f9fa;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+      font-size: 0.95em;
     }
 
-    .contact p {
-      margin: 10px 0;
-      font-size: 1.05em;
-    }
-
-    a.email, a.github {
-      color: #003566;
+    footer a {
+      color: #0d6efd;
       text-decoration: none;
     }
 
-    a.email:hover, a.github:hover {
+    footer a:hover {
       text-decoration: underline;
     }
   </style>
 </head>
-
 <body>
-  <h1>Portfolio – Yacine Aoui</h1>
-  <p style="text-align: center;">
-    Passionné par le développement web, voici quelques projets que j’ai réalisés.<br>
-    Ce portfolio continuera d’évoluer au fil de mes apprentissages et de mes expériences.
-  </p>
+  <header>
+    <h1>Portfolio – Yacine Aoui</h1>
+    <p>Passionné par le développement web, voici quelques projets que j'ai réalisés.<br>
+    Ce portfolio continuera d'évoluer au fil de mes apprentissages et de mes expériences.</p>
+  </header>
 
-  <h2>🚀 Projets en ligne</h2>
+  <main>
+    <h2>🚀 Projets en ligne</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>SoCo App</h3>
+        <p><strong>Description :</strong> Plateforme sociale pour organiser des événements (publics et privés), avec QR code, inscription, et messagerie intégrée.</p>
+        <p><strong>Technologies :</strong> Ruby on Rails, HTML, CSS, PostgreSQL</p>
+        <a href="https://github.com/Bertrand-VANDEN-NESTE/SoCo" target="_blank">Voir sur GitHub</a>
+      </div>
+      <div class="project">
+        <h3>HotelRooms</h3>
+        <p><strong>Description :</strong> Application de réservation d'hôtels, avec gestion des chambres, réservation par dates, modification et annulation.</p>
+        <p><strong>Technologies :</strong> Ruby on Rails, HTML, CSS, GitHub</p>
+        <a href="https://github.com/Yaoui13/hotel_rooms" target="_blank">Voir sur GitHub</a>
+      </div>
+    </div>
+  </main>
 
-  <div class="project">
-    <h3>SoCo App</h3>
-    <p>
-      <strong>Description :</strong> Plateforme sociale pour organiser des événements (publics et privés), avec QR code, inscription, et messagerie intégrée.<br>
-      <strong>Technologies :</strong> Ruby on Rails, HTML, CSS, PostgreSQL
-    </p>
-    <a href="https://github.com/Bertrand-VANDEN-NESTE/SoCo" target="_blank">Voir sur GitHub</a>
-  </div>
-
-  <div class="project">
-    <h3>HotelRooms</h3>
-    <p>
-      <strong>Description :</strong> Application de réservation d’hôtels, avec gestion des chambres, réservation par dates, modification et annulation.<br>
-      <strong>Technologies :</strong> Ruby on Rails, HTML, CSS, GitHub
-    </p>
-    <a href="https://github.com/Yaoui13/hotel_rooms" target="_blank">Voir sur GitHub</a>
-  </div>
-
-  <h2>📩 Contact</h2>
-
-  <div class="contact">
-    <p><strong>Email :</strong> <a class="email" href="mailto:yacineaoui1@gmail.com">yacineaoui1@gmail.com</a></p>
-    <p><strong>GitHub :</strong> <a class="github" href="https://github.com/Yaoui13" target="_blank">Yaoui13</a></p>
-  </div>
+  <footer>
+    <p><strong>Email :</strong> <a href="mailto:yacineaoui1@gmail.com">yacineaoui1@gmail.com</a></p>
+    <p><strong>GitHub :</strong> <a href="https://github.com/Yaoui13" target="_blank">Yaoui13</a></p>
+  </footer>
 </body>
 </html>
 
+
+  
