@@ -2,95 +2,139 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio de Yacine Aquí</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio – Yacine Aoui</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #fff;
-      color: #111;
-      padding: 40px;
-      max-width: 800px;
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      background: linear-gradient(to right, #eef2f7, #ffffff);
+      color: #212529;
+      padding: 40px 20px;
+      max-width: 950px;
       margin: auto;
     }
 
     h1 {
-      color: #003366;
-      font-size: 32px;
+      font-size: 3em;
+      color: #003566;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h1::after {
+      content: '';
+      display: block;
+      width: 60px;
+      margin: 10px auto 30px;
+      border-bottom: 3px solid #003566;
     }
 
     h2 {
-      margin-top: 30px;
-      color: #444;
-      font-size: 24px;
+      color: #003566;
+      font-size: 2em;
+      margin-top: 50px;
+      border-left: 5px solid #003566;
+      padding-left: 12px;
     }
 
-    p, li {
-      font-size: 16px;
-      line-height: 1.6;
+    p {
+      font-size: 1.1em;
+      line-height: 1.8;
+      margin-bottom: 20px;
     }
 
-    a {
-      color: #007acc;
+    .project {
+      background-color: #ffffff;
+      padding: 25px;
+      border: 1px solid #dee2e6;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-top: 25px;
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project h3 {
+      margin-top: 0;
+      font-size: 1.5em;
+      color: #343a40;
+    }
+
+    .project a {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #003566;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .project a:hover {
+      background-color: #001d3d;
+    }
+
+    .contact {
+      margin-top: 40px;
+      padding: 25px;
+      background-color: #f1f3f5;
+      border-radius: 10px;
+    }
+
+    .contact p {
+      margin: 10px 0;
+      font-size: 1.05em;
+    }
+
+    a.email, a.github {
+      color: #003566;
       text-decoration: none;
     }
 
-    button {
-      background-color: #007acc;
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 5px;
-    }
-
-    button:hover {
-      background-color: #005a99;
-    }
-
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    li {
-      margin-bottom: 25px;
-    }
-
-    em {
-      color: #555;
+    a.email:hover, a.github:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
+
 <body>
+  <h1>Portfolio – Yacine Aoui</h1>
+  <p style="text-align: center;">
+    Passionné par le développement web, voici quelques projets que j’ai réalisés.<br>
+    Ce portfolio continuera d’évoluer au fil de mes apprentissages et de mes expériences.
+  </p>
 
-  <h1>Portfolio – Yacine Aquí</h1>
-  <p>Bienvenue sur mon portfolio de développeur web. Vous trouverez ici mes projets les plus significatifs.</p>
+  <h2>🚀 Projets en ligne</h2>
 
-  <h2>Projets en ligne</h2>
-  <ul>
-    <li>
-      <strong>SoCo App</strong><br>
-      <em>Application sociale pour organiser des événements en ligne.</em><br>
-      <em>Tech : Ruby on Rails, HTML, CSS, PostgreSQL</em><br>
-      <a href="https://github.com/Bertrand-VANDEN-NESTE/SoCo" target="_blank">
-        <button>Voir sur GitHub</button>
-      </a>
-    </li>
-    <li>
-      <strong>HotelRooms</strong><br>
-      <em>Plateforme de réservation d’hôtels, stylisée et fonctionnelle.</em><br>
-      <em>Tech : Ruby on Rails, HTML, CSS, GitHub</em><br>
-      <a href="https://github.com/Yaoui13/hotel_rooms" target="_blank">
-        <button>Voir sur GitHub</button>
-      </a>
-    </li>
-  </ul>
+  <div class="project">
+    <h3>SoCo App</h3>
+    <p>
+      <strong>Description :</strong> Plateforme sociale pour organiser des événements (publics et privés), avec QR code, inscription, et messagerie intégrée.<br>
+      <strong>Technologies :</strong> Ruby on Rails, HTML, CSS, PostgreSQL
+    </p>
+    <a href="https://github.com/Bertrand-VANDEN-NESTE/SoCo" target="_blank">Voir sur GitHub</a>
+  </div>
 
-  <h2>Contact</h2>
-  <p>Email : yacineaoui1@gmail.com<br>
-  GitHub : <a href="https://github.com/Yaoui13" target="_blank">Yaoui13</a></p>
+  <div class="project">
+    <h3>HotelRooms</h3>
+    <p>
+      <strong>Description :</strong> Application de réservation d’hôtels, avec gestion des chambres, réservation par dates, modification et annulation.<br>
+      <strong>Technologies :</strong> Ruby on Rails, HTML, CSS, GitHub
+    </p>
+    <a href="https://github.com/Yaoui13/hotel_rooms" target="_blank">Voir sur GitHub</a>
+  </div>
 
+  <h2>📩 Contact</h2>
+
+  <div class="contact">
+    <p><strong>Email :</strong> <a class="email" href="mailto:yacineaoui1@gmail.com">yacineaoui1@gmail.com</a></p>
+    <p><strong>GitHub :</strong> <a class="github" href="https://github.com/Yaoui13" target="_blank">Yaoui13</a></p>
+  </div>
 </body>
 </html>
+
